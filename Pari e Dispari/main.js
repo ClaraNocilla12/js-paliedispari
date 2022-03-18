@@ -20,7 +20,7 @@ let numero = parseInt(prompt("scegli un numero da 1 a 5"));
 
 while (numero != 1 && numero != 2 && numero != 3 && numero != 4 && numero != 5) {
     if (numero != 1 && numero != 2 && numero != 3 && numero != 4 && numero != 5) {
-        numero = prompt("per favore, scegli un numero da 1 a 5");
+        numero = parseInt(prompt("per favore, scegli un numero da 1 a 5"));
     }
 }
 
