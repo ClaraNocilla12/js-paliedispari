@@ -8,48 +8,94 @@
 // Dichiariamo chi ha vinto.
 
 
-let pariDispariUtente=prompt("scegli 'p' per pari e 'd' per dispari");
+// let pariDispariUtente=prompt("scegli 'p' per pari e 'd' per dispari");
 
-while (pariDispariUtente != "p" && pariDispariUtente != "d"){
-    if (pariDispariUtente != "p" && pariDispariUtente != "d"){
-        pariDispariUtente = prompt("per favore, scegli 'p' per pari e 'd' per dispari");
+// while (pariDispariUtente != "p" && pariDispariUtente != "d"){
+//     if (pariDispariUtente != "p" && pariDispariUtente != "d"){
+//         pariDispariUtente = prompt("per favore, scegli 'p' per pari e 'd' per dispari");
+//     }
+// }
+
+// let numero = parseInt(prompt("scegli un numero da 1 a 5"));
+
+// while (numero != 1 && numero != 2 && numero != 3 && numero != 4 && numero != 5) {
+//     if (numero != 1 && numero != 2 && numero != 3 && numero != 4 && numero != 5) {
+//         numero = parseInt(prompt("per favore, scegli un numero da 1 a 5"));
+//     }
+// }
+
+
+// let sum=numero+generaRandom(4);
+// let risultato=pariDispari(sum);
+
+// if(risultato==pariDispariUtente){
+//     alert(`Hai vinto! La somma è: ${sum}`);
+// }else{
+//     alert(`Hai perso! La somma è: ${sum}`);
+// }
+
+
+
+
+
+// function pariDispari(n){
+//     if(n%2==0){
+//         return "p";
+//     }else{
+//         return "d";
+//     }
+// }
+
+
+
+// function generaRandom(max) {
+//     return Math.floor((Math.random() * max) + 1);
+// }
+
+
+
+
+// ALTRA POSSIBILITA' CON IL FORM (PER EVITARE LE CONDIZIONI)
+
+
+
+let pariDispariUtente;
+let numero;
+
+function esegui(){
+    
+    pariDispariUtente = document.getElementById("pariDispari").options[document.getElementById("pariDispari").selectedIndex].text;
+
+    numero = parseInt(document.getElementById("numero").options[document.getElementById("numero").selectedIndex].value);
+
+    let sum = numero + generaRandom(4);
+    
+
+    let risultato = pariDispari(sum);
+
+    if (risultato == pariDispariUtente) {
+        alert(`Hai vinto! La somma è: ${sum}`);
+    } else {
+        alert(`Hai perso! La somma è: ${sum}`);
     }
-}
 
-let numero = parseInt(prompt("scegli un numero da 1 a 5"));
 
-while (numero != 1 && numero != 2 && numero != 3 && numero != 4 && numero != 5) {
-    if (numero != 1 && numero != 2 && numero != 3 && numero != 4 && numero != 5) {
-        numero = parseInt(prompt("per favore, scegli un numero da 1 a 5"));
+
+
+
+    function pariDispari(n) {
+        if (n % 2 == 0) {
+            return "Pari";
+        } else {
+            return "Dispari";
+        }
     }
-}
-
-
-let sum=numero+generaRandom(4);
-let risultato=pariDispari(sum);
-
-if(risultato==pariDispariUtente){
-    alert(`Hai vinto! La somma è: ${sum}`);
-}else{
-    alert(`Hai perso! La somma è: ${sum}`);
-}
 
 
 
-
-
-function pariDispari(n){
-    if(n%2==0){
-        return "p";
-    }else{
-        return "d";
+    function generaRandom(max) {
+        return Math.floor((Math.random() * max) + 1);
     }
+
+   
 }
-
-
-
-function generaRandom(max) {
-    return Math.floor((Math.random() * max) + 1);
-}
-
-
