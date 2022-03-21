@@ -25,7 +25,7 @@
 // }
 
 
-// let sum=numero+generaRandom(4);
+// let sum=numero+generaRandom(5);
 // let risultato=pariDispari(sum);
 
 // if(risultato==pariDispariUtente){
@@ -65,12 +65,11 @@ let numero;
 function esegui(){
     
     pariDispariUtente = document.getElementById("pariDispari").options[document.getElementById("pariDispari").selectedIndex].text;
-
     numero = parseInt(document.getElementById("numero").options[document.getElementById("numero").selectedIndex].value);
-
-    let sum = numero + generaRandom(4);
+  
     
-
+    let sum = numero + generaRandom(5);
+    
     let risultato = pariDispari(sum);
 
     if (risultato == pariDispariUtente) {
@@ -82,7 +81,6 @@ function esegui(){
 
 
 
-
     function pariDispari(n) {
         if (n % 2 == 0) {
             return "Pari";
@@ -90,8 +88,6 @@ function esegui(){
             return "Dispari";
         }
     }
-
-
 
     function generaRandom(max) {
         return Math.floor((Math.random() * max) + 1);
